@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588058361494.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C00633F4",
+    "lastKnownWriteTime" : 1588076301,
+    "last_content_update" : 1588076301212,
+    "path" : "~/Projects/09_neural_nets/neuralnetr/R/linear.R",
+    "project_path" : "R/linear.R",
+    "properties" : {
+        "cursorPosition" : "40,0",
+        "scrollLine" : "13",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

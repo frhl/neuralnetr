@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588055341653.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "81250AC2",
+    "lastKnownWriteTime" : 1588060320,
+    "last_content_update" : 1588060320803,
+    "path" : "~/Projects/09_neural_nets/neuralnetr/R/tanh.R",
+    "project_path" : "R/tanh.R",
+    "properties" : {
+        "cursorPosition" : "24,0",
+        "scrollLine" : "2",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
