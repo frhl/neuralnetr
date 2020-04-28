@@ -1,25 +1,25 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1588063127394.000,
+    "created" : 1588079111293.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
-    "id" : "C0B51DA9",
-    "lastKnownWriteTime" : 1588064495,
-    "last_content_update" : 1588064495901,
-    "path" : "~/Projects/09_neural_nets/neuralnetr/R/misc.R",
-    "project_path" : "R/misc.R",
+    "id" : "D3216146",
+    "lastKnownWriteTime" : 1588079578,
+    "last_content_update" : 1588079578279,
+    "path" : "~/Projects/09_neural_nets/neuralnetr/R/NLL.R",
+    "project_path" : "R/NLL.R",
     "properties" : {
-        "cursorPosition" : "1,0",
+        "cursorPosition" : "5,11",
         "scrollLine" : "0",
-        "tempName" : "Untitled1"
+        "tempName" : "Untitled2"
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 5,
+    "relative_order" : 9,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_source"

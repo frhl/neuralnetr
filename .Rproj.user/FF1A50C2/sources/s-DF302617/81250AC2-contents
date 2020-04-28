@@ -7,19 +7,32 @@
 #' returns dLdZ, with the exception of SoftMax, where we assume dLdZ is
 #' passed in.
 
-
-
 ReLU <- R6Class("Module", list(
 
   A = 0,
 
   forward = function(Z) {
     self$A = ifelse(Z>0, Z, 0)
-    invisible(self$A)
+    return(self$A)
   },
   backward = function(dLdA){
     dLdZ = ifelse(dLdA>0, 1, 0)
-    invisible(dLdZ)
+    return(dLdZ)
+  })
+)
+
+
+Tanh <- R6Class("Module", list(
+
+  A = 0,
+
+  forward = function(Z) {
+    self$A = base::tanh(Z)
+    return(self$A)
+  },
+  backward = function(dLdA){
+    dLdZ = dLdA*(1 - (self$A^2))
+    return(dLdZ)
   })
 )
 

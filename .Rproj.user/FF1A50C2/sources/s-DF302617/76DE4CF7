@@ -1,25 +1,25 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1588064450733.000,
+    "created" : 1588079892723.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
-    "id" : "2BB6FD9E",
-    "lastKnownWriteTime" : 1588077185,
-    "last_content_update" : 1588077185404,
-    "path" : "~/Projects/09_neural_nets/neuralnetr/tests/testthat/test-misc.R",
-    "project_path" : "tests/testthat/test-misc.R",
+    "id" : "76DE4CF7",
+    "lastKnownWriteTime" : 1588081861,
+    "last_content_update" : 1588081861541,
+    "path" : "~/Projects/09_neural_nets/neuralnetr/tests/testthat/test-Sequential.R",
+    "project_path" : "tests/testthat/test-Sequential.R",
     "properties" : {
-        "cursorPosition" : "9,1",
+        "cursorPosition" : "10,20",
         "scrollLine" : "0",
         "tempName" : "Untitled2"
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 7,
+    "relative_order" : 10,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_source"
