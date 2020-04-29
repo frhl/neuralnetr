@@ -8,7 +8,7 @@
 # returns dLdA. This module also computes and stores dLdW and dLdW0,
 # the gradients with respect to the weights.
 
-Linear <- R6Class("Module", list(
+Linear <- R6Class("Module", inherit = ClassModule,  list(
 
   m = matrix(),
   n = matrix(),
@@ -41,10 +41,11 @@ Linear <- R6Class("Module", list(
 
   sgd_step = function(lrate){
     self$W = self$W - lrate * self$dLdW
-    self$W0 = self$W - lrate * self$dLdW0
+    self$W0 = self$W0 - lrate * self$dLdW0
   })
 
 
 )
+
 
 

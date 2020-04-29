@@ -7,7 +7,7 @@
 #' returns dLdZ, with the exception of SoftMax, where we assume dLdZ is
 #' passed in.
 
-ReLU <- R6Class("Module", list(
+ReLU <- R6Class("Module", inherit = ClassModule, list(
 
   A = 0,
 
@@ -22,7 +22,7 @@ ReLU <- R6Class("Module", list(
 )
 
 
-Tanh <- R6Class("Module", list(
+Tanh <- R6Class("Module", inherit = ClassModule, list(
 
   A = 0,
 

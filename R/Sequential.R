@@ -1,7 +1,7 @@
 
 
 
-Sequential <- R6Class("Module", list(
+Sequential <- R6Class("Module", inherit = ClassModule, list(
 
   loss = NA,
   modules = NULL,
@@ -23,12 +23,13 @@ Sequential <- R6Class("Module", list(
       Xt = X[,i]
       Yt = Y[,i]
 
-      #
       Ypred = self$forward(Xt)
       sum_loss = sum_loss + self$loss$forward(Ypred, Yt)
       err = self$loss$backward()
       self$backward(err)
       self$sgd_step(lrate)
+
+      print(err)
 
     }
 
