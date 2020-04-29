@@ -1,18 +1,18 @@
 #' @title Linear modules
 #
-#' @description Each linear module has a forward method that takes in a batch of
-# activations A (from the previous layer) and returns
-# a batch of pre-activations Z.
-#
-# Each linear module has a backward method that takes in dLdZ and
-# returns dLdA. This module also computes and stores dLdW and dLdW0,
-# the gradients with respect to the weights.
-
-
-linear <- function(m, n){
-  return(Linear$new(m, n))
-}
-
+#' @description A linear moduls implements a linear transformation:
+#'
+#' \deqn{..tba}
+#'
+#' specified by a weight matrix w and a bias vector w0. Each linear module has
+#' a forward method that takes in a batch of activations A (from the previous layer)
+#' and returns a batch of pre-activations Z.
+#'
+#' Each linear module has a backward method that takes in dLdZ and
+#' returns dLdA. This module also computes and stores dLdW and dLdW0,
+#' the gradients with respect to the weights.
+#' @family architecture
+#' @export
 
 Linear <- R6Class("Module", inherit = ClassModule,  list(
 
@@ -25,6 +25,9 @@ Linear <- R6Class("Module", inherit = ClassModule,  list(
   dLdW = matrix(),
   dLdW0 = matrix(),
 
+  #' @description initialize the weights.
+  #' @param m the m dimension of the module.
+  #' @param n the n dimension of the module.
   initialize = function(m, n) {
     self$m = m
     self$n = n
@@ -32,12 +35,19 @@ Linear <- R6Class("Module", inherit = ClassModule,  list(
     self$W = matrix(rnorm(n*m), nrow = m, ncol = n) # (m x n)
   },
 
+  #' @description do one step forward.
+  #' @param A input activation (m x b)
+  #' @return Z pre-activation (n x b)
   forward = function(A){
     self$A = A   # (m x b)
     Z = t(self$W) %*% self$A %+% self$W0 # (n x b)
     return(Z)
   },
 
+  #' @description do one gradient step backward
+  #' @param dLdZ the derivative of the loss with
+  #' respect to Z (n x b)
+  #' @return dLdA (m x b)
   backward = function(dLdZ){ # (n x b)
     self$dLdW = self$A %*% t(dLdZ) # (m x n)
     self$dLdW0 = apply(dLdZ, 1, sum)
@@ -45,6 +55,9 @@ Linear <- R6Class("Module", inherit = ClassModule,  list(
     return(dLdA)
   },
 
+  #' @description update the weights using
+  #' stochastic gradient descent
+  #' @param lrate learning rate
   sgd_step = function(lrate){
     self$W = self$W - lrate * self$dLdW
     self$W0 = self$W0 - lrate * self$dLdW0

@@ -2,7 +2,7 @@
 % Please edit documentation in R/NLL.R
 \name{NLL}
 \alias{NLL}
-\title{Negative Log Liklihood}
+\title{Negative Log Likelyhood}
 \description{
 Each loss module has a forward method that takes in a batch of predictions Ypred
 (from the previous layer) and labels Y and returns a scalar loss value.
@@ -11,8 +11,18 @@ The NLL module has a backward method that returns dLdZ, the gradient with respec
 to the preactivation to SoftMax (note: not the activation!), since we are always
 pairing SoftMax activation with NLL loss
 }
+\concept{loss}
 \section{Super class}{
 \code{\link[neuralnetr:ClassModule]{neuralnetr::ClassModule}} -> \code{Module}
+}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{Ypred}}{the predicted Y vector}
+
+\item{\code{Y}}{the actual Y vector}
+}
+\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -32,18 +42,36 @@ pairing SoftMax activation with NLL loss
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-forward"></a>}}
 \subsection{Method \code{forward()}}{
+Calculate the loss.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{NLL$forward(Ypred, Y)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{Ypred}}{the predicted Y vector.}
+
+\item{\code{Y}}{the actual Y vector.}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+loss as a scalar
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-backward"></a>}}
 \subsection{Method \code{backward()}}{
+calculate the
+gradient w.r.t. the loss
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{NLL$backward()}\if{html}{\out{</div>}}
 }
 
+\subsection{Returns}{
+dLdZ (? x b)
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}

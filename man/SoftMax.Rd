@@ -4,10 +4,19 @@
 \alias{SoftMax}
 \title{SoftMax}
 \description{
+Classic softmax that can be interpreted as a probability
+distribution over n items
+
 For `SoftMax$class_fun()`, given the column
 vector of class probabilities for each point (computed by Softmax), return
 a vector of the classes (integers) with the highest probability for each point.
 }
+\seealso{
+Other activation: 
+\code{\link{ReLU}},
+\code{\link{Tanh}}
+}
+\concept{activation}
 \section{Super class}{
 \code{\link[neuralnetr:ClassModule]{neuralnetr::ClassModule}} -> \code{Module}
 }
@@ -34,6 +43,16 @@ a vector of the classes (integers) with the highest probability for each point.
 \if{html}{\out{<div class="r">}}\preformatted{SoftMax$forward(Z)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{Z}}{a vector of pre-activations.}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+probabilities of the given class
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-backward"></a>}}
@@ -42,14 +61,36 @@ a vector of the classes (integers) with the highest probability for each point.
 \if{html}{\out{<div class="r">}}\preformatted{SoftMax$backward(dLdZ)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{dLdZ}}{a vector of gradients dLdZ.}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+dLdZ
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-class_fun"></a>}}
 \subsection{Method \code{class_fun()}}{
+a classify function.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SoftMax$class_fun(Ypred)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{Ypred}}{a vector of predictions.}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+the index for the vector of the
+predicted label.
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
