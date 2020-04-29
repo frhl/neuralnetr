@@ -8,6 +8,12 @@
 # returns dLdA. This module also computes and stores dLdW and dLdW0,
 # the gradients with respect to the weights.
 
+
+linear <- function(m, n){
+  return(Linear$new(m, n))
+}
+
+
 Linear <- R6Class("Module", inherit = ClassModule,  list(
 
   m = matrix(),

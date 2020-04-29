@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "C00633F4",
-    "lastKnownWriteTime" : 1588121402,
-    "last_content_update" : 1588121402903,
+    "lastKnownWriteTime" : 1588123280,
+    "last_content_update" : 1588123280337,
     "path" : "~/Projects/09_neural_nets/neuralnetr/R/linear.R",
     "project_path" : "R/linear.R",
     "properties" : {
-        "cursorPosition" : "39,4",
-        "scrollLine" : "18",
+        "cursorPosition" : "12,26",
+        "scrollLine" : "0",
         "tempName" : "Untitled1"
     },
     "read_only" : false,

@@ -1,5 +1,10 @@
 
 
+
+sequential <- function(modules, loss){
+  return(Sequential$new(modules, loss))
+}
+
 Sequential <- R6Class("Module", inherit = ClassModule, list(
 
   loss = NA,

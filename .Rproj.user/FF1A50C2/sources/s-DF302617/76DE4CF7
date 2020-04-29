@@ -7,12 +7,12 @@
     "folds" : "",
     "hash" : "0",
     "id" : "76DE4CF7",
-    "lastKnownWriteTime" : 1588123006,
-    "last_content_update" : 1588123006930,
+    "lastKnownWriteTime" : 1588123385,
+    "last_content_update" : 1588123385186,
     "path" : "~/Projects/09_neural_nets/neuralnetr/tests/testthat/test-Sequential.R",
     "project_path" : "tests/testthat/test-Sequential.R",
     "properties" : {
-        "cursorPosition" : "11,37",
+        "cursorPosition" : "20,26",
         "scrollLine" : "0",
         "tempName" : "Untitled2"
     },
