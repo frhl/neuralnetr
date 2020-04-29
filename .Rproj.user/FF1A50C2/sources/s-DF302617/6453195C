@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "6453195C",
-    "lastKnownWriteTime" : 1588121465,
-    "last_content_update" : 1588121465433,
+    "lastKnownWriteTime" : 1588123018,
+    "last_content_update" : 1588123018008,
     "path" : "~/Projects/09_neural_nets/neuralnetr/R/Sequential.R",
     "project_path" : "R/Sequential.R",
     "properties" : {
-        "cursorPosition" : "32,0",
-        "scrollLine" : "9",
+        "cursorPosition" : "1,0",
+        "scrollLine" : "0",
         "tempName" : "Untitled2"
     },
     "read_only" : false,

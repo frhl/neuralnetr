@@ -1,6 +1,5 @@
 
 
-
 Sequential <- R6Class("Module", inherit = ClassModule, list(
 
   loss = NA,
@@ -15,6 +14,7 @@ Sequential <- R6Class("Module", inherit = ClassModule, list(
     D = dim(X)[1]; N = dim(Y)[2]
     sum_loss = 0
 
+
     for (it in 1:iters){
 
       # Randomly pick a data point Xt, Yt by using sample
@@ -28,9 +28,6 @@ Sequential <- R6Class("Module", inherit = ClassModule, list(
       err = self$loss$backward()
       self$backward(err)
       self$sgd_step(lrate)
-
-      print(err)
-
     }
 
   },

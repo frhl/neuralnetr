@@ -1,4 +1,4 @@
-
+context('Linear')
 
 set.seed(1)
 
@@ -10,6 +10,7 @@ test_that("forward", {
 
   forward = linear_1$forward(X)
   expect_equal(dim(forward), c(3,4)) # n x b = n  x
+  expect_equal(sum(forward), -12.19474, tolerance = 10e-6)
 
 })
 
@@ -20,11 +21,9 @@ test_that("backward",{
                    -5.24547376e-07, 5.82459519e-04, -3.84805202e-10, 1.47943038e-09,
                    -3.47063705e-02, 2.55611604e-01, -1.83538094e-02, 1.11838432e-04), nrow = 3, ncol = 4, byrow = T)
 
-  backward = inear_1$backward(dL_dz1)
+  backward = linear_1$backward(dL_dz1)
   expect_equal(dim(backward), c(2,4))
-  #expect_equal(sum(backward), 0.2288266, tolerance = 10e-6)
-
-
+  expect_equal(sum(backward), -0.09905702, tolerance = 10e-6)
 
 })
 

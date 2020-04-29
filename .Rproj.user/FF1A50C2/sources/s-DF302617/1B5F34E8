@@ -7,12 +7,12 @@
     "folds" : "",
     "hash" : "0",
     "id" : "1B5F34E8",
-    "lastKnownWriteTime" : 1588077634,
-    "last_content_update" : 1588077634753,
+    "lastKnownWriteTime" : 1588122739,
+    "last_content_update" : 1588122739659,
     "path" : "~/Projects/09_neural_nets/neuralnetr/tests/testthat/test-linear.R",
     "project_path" : "tests/testthat/test-linear.R",
     "properties" : {
-        "cursorPosition" : "9,0",
+        "cursorPosition" : "1,0",
         "scrollLine" : "0"
     },
     "read_only" : false,
