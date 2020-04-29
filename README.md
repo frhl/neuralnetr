@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/frhl/neuralnetr.svg?branch=master)](https://travis-ci.org/frhl/neuralnetr)
+
 # neuralnetr
 
 A package for playing around with keras like neural networks using R6 methods and base R.
