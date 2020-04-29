@@ -15,6 +15,7 @@ passed in.
 \seealso{
 Other activation: 
 \code{\link{ReLU}},
+\code{\link{Sigmoid}},
 \code{\link{SoftMax}}
 }
 \concept{activation}

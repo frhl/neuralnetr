@@ -14,6 +14,7 @@ a vector of the classes (integers) with the highest probability for each point.
 \seealso{
 Other activation: 
 \code{\link{ReLU}},
+\code{\link{Sigmoid}},
 \code{\link{Tanh}}
 }
 \concept{activation}

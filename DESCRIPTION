@@ -21,11 +21,13 @@ Imports:
 Encoding: UTF-8
 RoxygenNote: 7.0.2
 Collate: 
+    'BatchNorm.R'
     'Linear.R'
     'misc.R'
     'Module.R'
     'NLL.R'
     'ReLU.R'
     'Sequential.R'
+    'Sigmoid.R'
     'SoftMax.R'
     'Tanh.R'
