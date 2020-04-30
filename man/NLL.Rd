@@ -13,7 +13,7 @@ pairing SoftMax activation with NLL loss
 }
 \concept{loss}
 \section{Super class}{
-\code{\link[neuralnetr:ClassModule]{neuralnetr::ClassModule}} -> \code{Module}
+\code{\link[neuralnetr:ClassModule]{neuralnetr::ClassModule}} -> \code{NLL}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

@@ -9,7 +9,7 @@
 #' @family activation
 #' @export
 
-ReLU <- R6Class("Module", inherit = ClassModule, list(
+ReLU <- R6Class("ReLU", inherit = ClassModule, list(
 
   #' @field A the activation vector
   A = NULL,

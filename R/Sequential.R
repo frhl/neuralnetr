@@ -9,7 +9,7 @@
 #' @export
 
 
-Sequential <- R6Class("Module", inherit = ClassModule, list(
+Sequential <- R6Class("Sequential", inherit = ClassModule, list(
 
   #' @field loss The loss module
   #' @field modules the list of current modules

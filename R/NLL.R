@@ -11,7 +11,7 @@
 #' @export
 
 
-NLL <- R6Class("Module", inherit = ClassModule, list(
+NLL <- R6Class("NLL", inherit = ClassModule, list(
 
   #' @field Ypred the predicted Y vector
   #' @field Y the actual Y vector

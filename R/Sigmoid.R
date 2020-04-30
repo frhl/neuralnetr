@@ -9,7 +9,7 @@
 #' @family activation
 #' @export
 
-Sigmoid <- R6Class("Module", inherit = ClassModule, list(
+Sigmoid <- R6Class("Sigmoid", inherit = ClassModule, list(
 
   #' @field A the activation vector
   A = NULL,

@@ -19,7 +19,7 @@ Other activation:
 }
 \concept{activation}
 \section{Super class}{
-\code{\link[neuralnetr:ClassModule]{neuralnetr::ClassModule}} -> \code{Module}
+\code{\link[neuralnetr:ClassModule]{neuralnetr::ClassModule}} -> \code{SoftMax}
 }
 \section{Methods}{
 \subsection{Public methods}{

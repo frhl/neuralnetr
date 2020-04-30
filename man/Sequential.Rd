@@ -18,7 +18,7 @@ Other architecture:
 }
 \concept{architecture}
 \section{Super class}{
-\code{\link[neuralnetr:ClassModule]{neuralnetr::ClassModule}} -> \code{Module}
+\code{\link[neuralnetr:ClassModule]{neuralnetr::ClassModule}} -> \code{Sequential}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

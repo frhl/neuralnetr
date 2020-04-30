@@ -10,7 +10,7 @@
 #' @export
 
 
-SoftMax <- R6Class("Module", inherit = ClassModule, list(
+SoftMax <- R6Class("SoftMax", inherit = ClassModule, list(
 
   #' @param Z a vector of pre-activations.
   #' @return probabilities of the given class

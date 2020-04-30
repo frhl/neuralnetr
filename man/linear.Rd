@@ -22,7 +22,7 @@ Other architecture:
 }
 \concept{architecture}
 \section{Super class}{
-\code{\link[neuralnetr:ClassModule]{neuralnetr::ClassModule}} -> \code{Module}
+\code{\link[neuralnetr:ClassModule]{neuralnetr::ClassModule}} -> \code{Linear}
 }
 \section{Methods}{
 \subsection{Public methods}{

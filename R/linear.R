@@ -14,7 +14,7 @@
 #' @family architecture
 #' @export
 
-Linear <- R6Class("Module", inherit = ClassModule,  list(
+Linear <- R6Class("Linear", inherit = ClassModule,  list(
 
   m = matrix(),
   n = matrix(),
