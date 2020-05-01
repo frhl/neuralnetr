@@ -27,3 +27,7 @@
   }
   stop('non-conformable arrays')
 }
+
+argmax = function(x, margin = 2){
+  return(apply(x, margin, function(i) which(i==max(i))))
+}

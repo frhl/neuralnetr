@@ -30,23 +30,30 @@ Sequential <- R6Class("Sequential", inherit = ClassModule, list(
   #' @param iters amount of iterations.
   #' @param lrate the learning rate.
   sgd = function(X, Y, iters=100, lrate=0.005){
-    D = dim(X)[1]; N = dim(Y)[2]
+    D = dim(X)[2]; N = dim(Y)[2]
     sum_loss = 0
+    track_loss = c()
 
     for (it in 1:iters){
 
       # Randomly pick a data point Xt, Yt by using sample
       # to choose a random index into the data.
-      i = sample.int(D, 1)
+      i = sample(1:D, 1)
+
       Xt = X[,i]
       Yt = Y[,i]
-
       Ypred = self$forward(Xt)
-      sum_loss = sum_loss + self$loss$forward(Ypred, Yt)
+      cur_loss = self$loss$forward(Ypred, Yt)
+      sum_loss = sum_loss + cur_loss
       err = self$loss$backward()
+      track_loss = c(track_loss, sum_loss)
       self$backward(err)
       self$sgd_step(lrate)
+
+      self$print_accuarcy(it, X, Y, cur_loss)
     }
+
+    return(track_loss)
 
   },
 
@@ -83,12 +90,11 @@ Sequential <- R6Class("Sequential", inherit = ClassModule, list(
   #' @param Y target Y
   #' @param cur_loss the current loss
   #' @param every how often should the function return feeddback?
-  print_accuarcy = function(it, X, Y, cur_loss, every=100){
+  print_accuarcy = function(it, X, Y, cur_loss, every=250){
     if (it %% every == 0){
-      #cf = rev(self$Modules)
-      #cf = self.modules[-1].class_fun
-      #acc = np.mean(cf(self.forward(X)) == cf(Y))
-      #print('Iteration =', it, '\tAcc =', acc, '\tLoss =', cur_loss, flush=True)
+      cf = self$modules[[length(self$modules)]]$class_fun
+      acc = mean(cf(self$forward(X)) == as.numeric(cf(Y)))
+      write(paste('Iteration =', it, '\tAcc =', acc, '\tLoss =', cur_loss),stdout())
     }
   })
 )

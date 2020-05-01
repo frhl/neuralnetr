@@ -10,6 +10,8 @@
 /Users/flassen/Projects/09_neural_nets/neuralnetr/R/linear.R="F7311E7E"
 /Users/flassen/Projects/09_neural_nets/neuralnetr/R/misc.R="73A53943"
 /Users/flassen/Projects/09_neural_nets/neuralnetr/R/tanh.R="553BF99C"
+/Users/flassen/Projects/09_neural_nets/neuralnetr/R/test-NLL.R="476413BE"
+/Users/flassen/Projects/09_neural_nets/neuralnetr/tests/testthat/test-ReLU.R="F7CE48D0"
 /Users/flassen/Projects/09_neural_nets/neuralnetr/tests/testthat/test-Sequential.R="63332883"
 /Users/flassen/Projects/09_neural_nets/neuralnetr/tests/testthat/test-SoftMax.R="D96324C3"
 /Users/flassen/Projects/09_neural_nets/neuralnetr/tests/testthat/test-linear.R="A8F05043"

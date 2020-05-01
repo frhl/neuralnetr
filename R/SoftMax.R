@@ -15,7 +15,14 @@ SoftMax <- R6Class("SoftMax", inherit = ClassModule, list(
   #' @param Z a vector of pre-activations.
   #' @return probabilities of the given class
   forward = function(Z) {
-    return(exp(Z) / sum(exp(Z)))
+
+    sums = apply(Z, 2, function(x) {
+      sigma = sum(exp(x))
+      return(exp(x)/sigma)
+    })
+
+    return(sums)
+
   },
 
   #' @param dLdZ a vector of gradients dLdZ.
@@ -29,7 +36,7 @@ SoftMax <- R6Class("SoftMax", inherit = ClassModule, list(
   #' @return the index for the vector of the
   #' predicted label.
   class_fun = function(Ypred){
-    return(which(Ypred == max(Ypred)))
+    return(argmax(Ypred, 2)-1)
   }
   )
 )
