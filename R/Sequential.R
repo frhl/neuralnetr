@@ -84,6 +84,13 @@ Sequential <- R6Class("Sequential", inherit = ClassModule, list(
 
   },
 
+  #' @description classify the labels of the input
+  #' @param X input X
+  classify = function(X){
+    cf = self$modules[[length(self$modules)]]$class_fun
+    return(cf(self$forward(X)))
+  },
+
   #' @description print accuracy during training
   #' @param it iteration number
   #' @param X data X

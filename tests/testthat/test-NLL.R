@@ -7,7 +7,7 @@ test_that('forward method',{
   # double sample
   x1 = matrix(c(3, 3, 8,17), ncol = 2, nrow = 2)
   #r1 = matrix(c(6, 9, 0,3), ncol = 2, nrow = 2)
-  nll$forward(x1, )
+  #nll$forward(x1, )
 
 
 })

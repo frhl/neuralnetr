@@ -37,6 +37,7 @@ Other architecture:
 \item \href{#method-forward}{\code{Sequential$forward()}}
 \item \href{#method-backward}{\code{Sequential$backward()}}
 \item \href{#method-sgd_step}{\code{Sequential$sgd_step()}}
+\item \href{#method-classify}{\code{Sequential$classify()}}
 \item \href{#method-print_accuarcy}{\code{Sequential$print_accuarcy()}}
 \item \href{#method-clone}{\code{Sequential$clone()}}
 }
@@ -136,11 +137,27 @@ gradient descent step
 }
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-classify"></a>}}
+\subsection{Method \code{classify()}}{
+classify the labels of the input
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Sequential$classify(X)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{X}}{input X}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-print_accuarcy"></a>}}
 \subsection{Method \code{print_accuarcy()}}{
 print accuracy during training
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Sequential$print_accuarcy(it, X, Y, cur_loss, every = 100)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{Sequential$print_accuarcy(it, X, Y, cur_loss, every = 250)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{

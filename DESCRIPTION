@@ -1,6 +1,6 @@
 Package: neuralnetr
 Title: Neural Nets in R
-Version: 0.9.0
+Version: 0.9.1
 Authors@R: 
     c(person(given = "Frederik",
              family = "Lassen",
@@ -12,7 +12,8 @@ License: MIT + file LICENSE
 LazyData: true
 Depends:
     R (>= 3.6),
-    R6
+    R6,
+    ggplot2
 Suggests:
     devtools,
     testthat (>= 2.1.0),
@@ -22,6 +23,8 @@ Encoding: UTF-8
 RoxygenNote: 7.0.2
 Collate: 
     'BatchNorm.R'
+    'classify_2d_grid.R'
+    'plot_tidy_2d.R'
     'Linear.R'
     'misc.R'
     'Module.R'

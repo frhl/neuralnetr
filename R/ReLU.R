@@ -24,7 +24,7 @@ ReLU <- R6Class("ReLU", inherit = ClassModule, list(
   #' @param dLdA vector of gradients.
   #' @return a vector gradeints.
   backward = function(dLdA){
-    dLdZ = ifelse(dLdA>0, 1, 0)
+    dLdZ = dLdA * as.numeric(self$A != 0)
     return(dLdZ)
   })
 )
