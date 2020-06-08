@@ -24,6 +24,7 @@ RoxygenNote: 7.0.2
 Collate: 
     'BatchNorm.R'
     'classify_2d_grid.R'
+    'data.R'
     'plot_tidy_2d.R'
     'Linear.R'
     'misc.R'
@@ -33,4 +34,5 @@ Collate:
     'Sequential.R'
     'Sigmoid.R'
     'SoftMax.R'
+    'SquaredLoss.R'
     'Tanh.R'

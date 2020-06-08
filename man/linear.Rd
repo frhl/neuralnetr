@@ -6,7 +6,7 @@
 \description{
 A linear moduls implements a linear transformation:
 
-\deqn{..tba}
+\deqn{latex eq 1}
 
 specified by a weight matrix w and a bias vector w0. Each linear module has
 a forward method that takes in a batch of activations A (from the previous layer)

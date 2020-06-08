@@ -4,7 +4,17 @@
 #' feed forward neural network. The Sequential is used as a
 #' wrapper for the modules.
 #'
+#' @examples
+#' \dontrun{
+#' ## classification problem
+#' nn = Sequential$new(list(
+#' Linear$new(2,10), ReLU$new(),
+#' Linear$new(10,10), Tanh$new(),
+#' Linear$new(10,2), SoftMax$new()),
+#' NLL$new())
 #'
+#'
+#' }
 #' @family architecture
 #' @export
 

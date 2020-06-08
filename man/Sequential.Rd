@@ -12,6 +12,18 @@ wrapper for the modules.
 Note that delta can refer to dLdA or dLdZ over the
 course of the for loop, depending on the module m
 }
+\examples{
+\dontrun{
+## classification problem
+nn = Sequential$new(list(
+Linear$new(2,10), ReLU$new(),
+Linear$new(10,10), Tanh$new(),
+Linear$new(10,2), SoftMax$new()),
+NLL$new())
+
+
+}
+}
 \seealso{
 Other architecture: 
 \code{\link{Linear}}
