@@ -3,6 +3,10 @@ language: r
 cache: packages
 warnings_are_errors: false
 
+# test multiple operating systems
+os:
+  - linux
+
 # environment variables set for all builds
 env:
   global:
