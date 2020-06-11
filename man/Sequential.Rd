@@ -83,7 +83,7 @@ setup the neural network
 \subsection{Method \code{sgd()}}{
 train neural network using stochastic gradient descent
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Sequential$sgd(X, Y, iters = 100, lrate = 0.005)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{Sequential$sgd(X, Y, iters = 100, lrate = 0.005, verbose = F)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
@@ -96,8 +96,13 @@ train neural network using stochastic gradient descent
 \item{\code{iters}}{amount of iterations.}
 
 \item{\code{lrate}}{the learning rate.}
+
+\item{\code{verbose}}{print results every epoch.}
 }
 \if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+cumulative loss for every iteration.
 }
 }
 \if{html}{\out{<hr>}}
