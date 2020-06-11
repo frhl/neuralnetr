@@ -4,5 +4,5 @@
 #' @family datasets
 #' @docType data
 
-"xor"
+"xor_example"
 

@@ -39,7 +39,9 @@ Sequential <- R6Class("Sequential", inherit = ClassModule, list(
   #' @param Y the Y (target) input
   #' @param iters amount of iterations.
   #' @param lrate the learning rate.
-  sgd = function(X, Y, iters=100, lrate=0.005){
+  #' @param verbose print results every epoch.
+  #' @return cumulative loss for every iteration.
+  sgd = function(X, Y, iters=100, lrate=0.005, verbose = F){
     D = dim(X)[2]; N = dim(Y)[2]
     sum_loss = 0
     track_loss = c()
@@ -60,7 +62,7 @@ Sequential <- R6Class("Sequential", inherit = ClassModule, list(
       self$backward(err)
       self$sgd_step(lrate)
 
-      self$print_accuarcy(it, X, Y, cur_loss)
+      if (verbose) self$print_accuarcy(it, X, Y, cur_loss)
     }
 
     return(track_loss)
