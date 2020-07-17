@@ -34,5 +34,5 @@ Collate:
     'Sigmoid.R'
     'SoftMax.R'
     'SquaredLoss.R'
-    'test.R'
+    'Tanh.R'
 
