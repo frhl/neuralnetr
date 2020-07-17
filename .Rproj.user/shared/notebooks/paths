@@ -1,4 +1,5 @@
 /Users/flassen/Projects/09_neural_nets/neuralnetr/R/BatchNorm.R="577723CF"
+/Users/flassen/Projects/09_neural_nets/neuralnetr/R/Linear.R="037A916E"
 /Users/flassen/Projects/09_neural_nets/neuralnetr/R/Module.R="843577F"
 /Users/flassen/Projects/09_neural_nets/neuralnetr/R/NLL.R="B1D0E966"
 /Users/flassen/Projects/09_neural_nets/neuralnetr/R/ReLU.R="5C585E2"
@@ -17,3 +18,4 @@
 /Users/flassen/Projects/09_neural_nets/neuralnetr/tests/testthat/test-SoftMax.R="D96324C3"
 /Users/flassen/Projects/09_neural_nets/neuralnetr/tests/testthat/test-linear.R="A8F05043"
 /Users/flassen/Projects/09_neural_nets/neuralnetr/tests/testthat/test-misc.R="73A89678"
+/Users/flassen/Projects/09_neural_nets/neuralnetr_17JUL20_bu/R/Tanh.R="7248C53F"

@@ -35,4 +35,5 @@ Collate:
     'SoftMax.R'
     'SquaredLoss.R'
     'Tanh.R'
+    'Linear.R'
 
