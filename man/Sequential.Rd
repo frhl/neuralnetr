@@ -24,10 +24,6 @@ NLL$new())
 
 }
 }
-\seealso{
-Other architecture: 
-\code{\link{Linear}}
-}
 \concept{architecture}
 \section{Super class}{
 \code{\link[neuralnetr:ClassModule]{neuralnetr::ClassModule}} -> \code{Sequential}
@@ -62,6 +58,7 @@ Other architecture:
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 setup the neural network
 \subsection{Usage}{
@@ -80,6 +77,7 @@ setup the neural network
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-sgd"></a>}}
+\if{latex}{\out{\hypertarget{method-sgd}{}}}
 \subsection{Method \code{sgd()}}{
 train neural network using stochastic gradient descent
 \subsection{Usage}{
@@ -107,6 +105,7 @@ cumulative loss for every iteration.
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-forward"></a>}}
+\if{latex}{\out{\hypertarget{method-forward}{}}}
 \subsection{Method \code{forward()}}{
 Compute Ypred
 \subsection{Usage}{
@@ -123,6 +122,7 @@ Compute Ypred
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-backward"></a>}}
+\if{latex}{\out{\hypertarget{method-backward}{}}}
 \subsection{Method \code{backward()}}{
 Update dLdW and dLdW0
 \subsection{Usage}{
@@ -139,6 +139,7 @@ Update dLdW and dLdW0
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-sgd_step"></a>}}
+\if{latex}{\out{\hypertarget{method-sgd_step}{}}}
 \subsection{Method \code{sgd_step()}}{
 gradient descent step
 \subsection{Usage}{
@@ -155,6 +156,7 @@ gradient descent step
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-classify"></a>}}
+\if{latex}{\out{\hypertarget{method-classify}{}}}
 \subsection{Method \code{classify()}}{
 classify the labels of the input
 \subsection{Usage}{
@@ -171,6 +173,7 @@ classify the labels of the input
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-print_accuarcy"></a>}}
+\if{latex}{\out{\hypertarget{method-print_accuarcy}{}}}
 \subsection{Method \code{print_accuarcy()}}{
 print accuracy during training
 \subsection{Usage}{
@@ -195,6 +198,7 @@ print accuracy during training
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

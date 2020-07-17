@@ -15,8 +15,7 @@ passed in.
 \seealso{
 Other activation: 
 \code{\link{ReLU}},
-\code{\link{SoftMax}},
-\code{\link{Tanh}}
+\code{\link{SoftMax}}
 }
 \concept{activation}
 \section{Super class}{
@@ -46,6 +45,7 @@ Other activation:
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-forward"></a>}}
+\if{latex}{\out{\hypertarget{method-forward}{}}}
 \subsection{Method \code{forward()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Sigmoid$forward(Z)}\if{html}{\out{</div>}}
@@ -64,6 +64,7 @@ a vector of activations.
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-backward"></a>}}
+\if{latex}{\out{\hypertarget{method-backward}{}}}
 \subsection{Method \code{backward()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Sigmoid$backward(dLdA)}\if{html}{\out{</div>}}
@@ -82,6 +83,7 @@ a vector gradeints.
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

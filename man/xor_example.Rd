@@ -4,7 +4,9 @@
 \name{xor_example}
 \alias{xor_example}
 \title{XOR problem}
-\format{list with matrix X (coordinates in 2D space) and matrix Y (binary labels)}
+\format{
+list with matrix X (coordinates in 2D space) and matrix Y (binary labels)
+}
 \usage{
 xor_example
 }

@@ -20,13 +20,11 @@ Suggests:
 Imports:
     stats
 Encoding: UTF-8
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0
 Collate: 
     'BatchNorm.R'
     'classify_2d_grid.R'
     'data.R'
-    'Tanh.R'
-    'Linear.R'
     'plot_tidy_2d.R'
     'misc.R'
     'Module.R'
@@ -36,3 +34,4 @@ Collate:
     'Sigmoid.R'
     'SoftMax.R'
     'SquaredLoss.R'
+

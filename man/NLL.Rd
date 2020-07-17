@@ -45,6 +45,7 @@ Other loss:
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-forward"></a>}}
+\if{latex}{\out{\hypertarget{method-forward}{}}}
 \subsection{Method \code{forward()}}{
 Calculate the loss.
 \subsection{Usage}{
@@ -66,6 +67,7 @@ loss as a scalar
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-backward"></a>}}
+\if{latex}{\out{\hypertarget{method-backward}{}}}
 \subsection{Method \code{backward()}}{
 calculate the
 gradient w.r.t. the loss
@@ -79,6 +81,7 @@ dLdZ (? x b)
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

@@ -14,8 +14,7 @@ a vector of the classes (integers) with the highest probability for each point.
 \seealso{
 Other activation: 
 \code{\link{ReLU}},
-\code{\link{Sigmoid}},
-\code{\link{Tanh}}
+\code{\link{Sigmoid}}
 }
 \concept{activation}
 \section{Super class}{
@@ -39,6 +38,7 @@ Other activation:
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-forward"></a>}}
+\if{latex}{\out{\hypertarget{method-forward}{}}}
 \subsection{Method \code{forward()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SoftMax$forward(Z)}\if{html}{\out{</div>}}
@@ -57,6 +57,7 @@ probabilities of the given class
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-backward"></a>}}
+\if{latex}{\out{\hypertarget{method-backward}{}}}
 \subsection{Method \code{backward()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SoftMax$backward(dLdZ)}\if{html}{\out{</div>}}
@@ -75,6 +76,7 @@ dLdZ
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-class_fun"></a>}}
+\if{latex}{\out{\hypertarget{method-class_fun}{}}}
 \subsection{Method \code{class_fun()}}{
 a classify function.
 \subsection{Usage}{
@@ -95,6 +97,7 @@ predicted label.
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{
