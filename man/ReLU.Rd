@@ -15,7 +15,8 @@ passed in.
 \seealso{
 Other activation: 
 \code{\link{Sigmoid}},
-\code{\link{SoftMax}}
+\code{\link{SoftMax}},
+\code{\link{Tanh}}
 }
 \concept{activation}
 \section{Super class}{
