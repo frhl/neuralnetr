@@ -26,6 +26,3 @@ test_that('Sequential can be setup like a neural network',{
 
 
 
-
-
-
