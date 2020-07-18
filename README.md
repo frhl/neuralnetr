@@ -28,7 +28,7 @@ plot_tidy_2d(nn, X)
 ```
 Running the above code would yield the following classification boundaries:
 
-![alt text](https://github.com/frhl/neuralnetr/blob/master/images/xor.png?raw=true)
+![alt text](https://github.com/frhl/neuralnetr/blob/master/images/xor.png?raw=true){ width=50% }
 
 
 
