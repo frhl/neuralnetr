@@ -20,7 +20,7 @@ nn = Sequential$new(list(
 # xor problem
 X = t(as.matrix(data.frame(x1=c(1,2,1,2),x2=c(1,2,2,1))))
 Y = t(as.matrix(data.frame(y1=c(0,0,1,1),y2=c(1,1,0,0))))
-q = nn$sgd(X, Y, 2500, 0.05)
+q = nn$sgd(X, Y, 2500, 0.05) # 5000 iterations, 0.05 learning rate
 q = nn$classify(X)
 plot_tidy_2d(nn, X)
 
@@ -28,7 +28,7 @@ plot_tidy_2d(nn, X)
 ```
 Running the above code would yield the following classification boundaries:
 
-![alt text](https://github.com/frhl/neuralnetr/blob/master/images/xor.png?raw=true){ width=50% }
+![alt text](https://github.com/frhl/neuralnetr/blob/master/images/xor.png?raw=true)
 
 
 
