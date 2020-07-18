@@ -1,4 +1,9 @@
-
+#' @title Linear modules
+#'
+#' @description A linear moduls implements a linear transformation:
+#'
+#' @family architecture
+#' @export
 
 Linear <- R6Class("Linear", inherit = ClassModule,  list(
 

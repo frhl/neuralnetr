@@ -2,6 +2,7 @@
 
 export("%+%")
 export("%-%")
+export(Linear)
 export(NLL)
 export(ReLU)
 export(Sequential)

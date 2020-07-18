@@ -24,6 +24,10 @@ NLL$new())
 
 }
 }
+\seealso{
+Other architecture: 
+\code{\link{Linear}}
+}
 \concept{architecture}
 \section{Super class}{
 \code{\link[neuralnetr:ClassModule]{neuralnetr::ClassModule}} -> \code{Sequential}
