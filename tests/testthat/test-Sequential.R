@@ -3,7 +3,6 @@ context('Sequential')
 
 test_that('Sequential can be setup like a neural network',{
 
-  if (F){
     # setup problem
     nn = Sequential$new(list(
       Linear$new(2,5), ReLU$new(),
@@ -21,8 +20,6 @@ test_that('Sequential can be setup like a neural network',{
 
     # expect
     expect_equal(nn$classify(X), c(1,1,0,0))
-  }
-
 
 })
 

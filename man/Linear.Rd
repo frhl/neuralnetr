@@ -5,6 +5,16 @@
 \title{Linear modules}
 \description{
 A linear moduls implements a linear transformation:
+
+(latex code)
+
+specified by a weight matrix w and a bias vector w0. Each linear module has
+a forward method that takes in a batch of activations A (from the previous layer)
+and returns a batch of pre-activations Z.
+
+Each linear module has a backward method that takes in dLdZ and
+returns dLdA. This module also computes and stores dLdW and dLdW0,
+the gradients with respect to the weights.
 }
 \seealso{
 Other architecture: 
