@@ -2,17 +2,17 @@
 
 # neuralnetr
 
-A package for playing around with keras like neural networks using R6 methods and base R.
+A package for playing around with keras-like neural networks using R6 methods and base R. This is just an experiment, and the current version only allows for binary classification through stochastic gradient descent optimization. The next versions will contain loss functions for regression, minibatch gradient decent, better optimizers (the famous ADAM), and a batch normalization module to account for internal covariate shifting.
 
-## Running a deep feed-forward neural network
+## Running a deep feed-forward neural network (Binary classification)
 
 ```R
 
 
-# setup architecture
+# setup architecture 
 nn = Sequential$new(list(
   Linear$new(2,10), ReLU$new(),
-  Linear$new(10,10), Tanh$new(),
+  Linear$new(10,10), Tanh$new(), # 1 x 10 neurons, w. tanh activation
   Linear$new(10,2), SoftMax$new()),
   NLL$new())
 
