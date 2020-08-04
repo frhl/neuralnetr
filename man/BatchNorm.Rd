@@ -35,6 +35,23 @@ Other architecture:
 \item{\code{B}}{weights (nl × 1 vector)}
 
 \item{\code{G}}{weights (nl × 1 vector)}
+
+\item{\code{A}}{m x K: m input channels and mini-batch size K}
+
+\item{\code{K}}{mini-batch size.}
+
+\item{\code{mus}}{batch-wise means.}
+
+\item{\code{vars}}{batch-wise variances.}
+
+\item{\code{batch-wise}}{normalized inputs using input, mus, vars and eps.}
+}
+\if{html}{\out{</div>}}
+}
+\section{Active bindings}{
+\if{html}{\out{<div class="r6-active-bindings">}}
+\describe{
+\item{\code{batch-wise}}{normalized inputs using input, mus, vars and eps.}
 }
 \if{html}{\out{</div>}}
 }
@@ -43,6 +60,8 @@ Other architecture:
 \itemize{
 \item \href{#method-new}{\code{BatchNorm$new()}}
 \item \href{#method-forward}{\code{BatchNorm$forward()}}
+\item \href{#method-backward}{\code{BatchNorm$backward()}}
+\item \href{#method-step}{\code{BatchNorm$step()}}
 \item \href{#method-clone}{\code{BatchNorm$clone()}}
 }
 }
@@ -58,7 +77,7 @@ Other architecture:
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{BatchNorm$new(m)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{BatchNorm$new(m, seed)}\if{html}{\out{</div>}}
 }
 
 }
@@ -68,6 +87,24 @@ Other architecture:
 \subsection{Method \code{forward()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{BatchNorm$forward(A)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-backward"></a>}}
+\if{latex}{\out{\hypertarget{method-backward}{}}}
+\subsection{Method \code{backward()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{BatchNorm$backward(dLdZ)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-step"></a>}}
+\if{latex}{\out{\hypertarget{method-step}{}}}
+\subsection{Method \code{step()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{BatchNorm$step(lrate)}\if{html}{\out{</div>}}
 }
 
 }
