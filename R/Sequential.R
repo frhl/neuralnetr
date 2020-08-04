@@ -13,6 +13,11 @@
 #' Linear$new(10,2), SoftMax$new()),
 #' NLL$new())
 #'
+#' data(xor_example)
+#' X = xor_example$X
+#' Y = xor_example$Y
+#'
+#' nn$mini_gd(X, Y, 2500, 0.05,  K = 2)
 #'
 #' }
 #' @family architecture
@@ -40,8 +45,11 @@ Sequential <- R6Class("Sequential", inherit = ClassModule, list(
   #' @param iters amount of iterations.
   #' @param lrate the learning rate.
   #' @param verbose print results every epoch.
+  #' @param seed random seed.
   #' @return cumulative loss for every iteration.
-  sgd = function(X, Y, iters=100, lrate=0.005, verbose = F){
+  sgd = function(X, Y, iters=100, lrate=0.005, verbose = F, seed = 1){
+
+    set.seed(seed)
     D = dim(X)[2]; N = dim(Y)[2]
     sum_loss = 0
     track_loss = c()
@@ -63,6 +71,52 @@ Sequential <- R6Class("Sequential", inherit = ClassModule, list(
       self$sgd_step(lrate)
 
       if (verbose) self$print_accuarcy(it, X, Y, cur_loss)
+    }
+
+    return(track_loss)
+
+  },
+
+
+  #' @description train neural network using minibatch gradient descent.
+  #' @param X the X input (m x b)
+  #' @param Y the Y (target) input
+  #' @param iters amount of iterations.
+  #' @param lrate the learning rate.
+  #' @param K the size of the minibatch.
+  #' @param verbose print results every epoch.
+  #' @param seed random seed.
+  #' @return cumulative loss for every iteration.
+  mini_gd = function(X, Y, iters=100, lrate=0.005, K=5, verbose = F, seed = 1){
+
+    set.seed(seed)
+    D = dim(X)[2]; N = dim(Y)[2]
+    sum_loss = 0
+    track_loss = c()
+
+    for (it in 1:iters){
+
+      indicies = sample(1:N)
+      X = X[,indicies]
+      Y = Y[,indicies]
+
+      for (j in 0:(floor(N/K) - 1) ) {
+
+        Xt = X[, (j*K+1):((j+1)*K)]
+        Yt = Y[, (j*K+1):((j+1)*K)]
+
+        Ypred = self$forward(Xt)
+        cur_loss = self$loss$forward(Ypred, Yt)
+        sum_loss = sum_loss + cur_loss
+        err = self$loss$backward()
+        track_loss = c(track_loss, sum_loss)
+        self$backward(err)
+        self$sgd_step(lrate)
+
+        if (verbose) self$print_accuarcy(it, X, Y, cur_loss)
+
+      }
+
     }
 
     return(track_loss)

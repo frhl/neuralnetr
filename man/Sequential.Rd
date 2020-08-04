@@ -21,6 +21,11 @@ Linear$new(10,10), Tanh$new(),
 Linear$new(10,2), SoftMax$new()),
 NLL$new())
 
+data(xor_example)
+X = xor_example$X
+Y = xor_example$Y
+
+nn$mini_gd(X, Y, 2500, 0.05,  K = 2)
 
 }
 }
@@ -46,6 +51,7 @@ Other architecture:
 \itemize{
 \item \href{#method-new}{\code{Sequential$new()}}
 \item \href{#method-sgd}{\code{Sequential$sgd()}}
+\item \href{#method-mini_gd}{\code{Sequential$mini_gd()}}
 \item \href{#method-forward}{\code{Sequential$forward()}}
 \item \href{#method-backward}{\code{Sequential$backward()}}
 \item \href{#method-sgd_step}{\code{Sequential$sgd_step()}}
@@ -85,7 +91,7 @@ setup the neural network
 \subsection{Method \code{sgd()}}{
 train neural network using stochastic gradient descent
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Sequential$sgd(X, Y, iters = 100, lrate = 0.005, verbose = F)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{Sequential$sgd(X, Y, iters = 100, lrate = 0.005, verbose = F, seed = 1)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
@@ -100,6 +106,48 @@ train neural network using stochastic gradient descent
 \item{\code{lrate}}{the learning rate.}
 
 \item{\code{verbose}}{print results every epoch.}
+
+\item{\code{seed}}{random seed.}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+cumulative loss for every iteration.
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-mini_gd"></a>}}
+\if{latex}{\out{\hypertarget{method-mini_gd}{}}}
+\subsection{Method \code{mini_gd()}}{
+train neural network using minibatch gradient descent.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Sequential$mini_gd(
+  X,
+  Y,
+  iters = 100,
+  lrate = 0.005,
+  K = 5,
+  verbose = F,
+  seed = 1
+)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{X}}{the X input (m x b)}
+
+\item{\code{Y}}{the Y (target) input}
+
+\item{\code{iters}}{amount of iterations.}
+
+\item{\code{lrate}}{the learning rate.}
+
+\item{\code{K}}{the size of the minibatch.}
+
+\item{\code{verbose}}{print results every epoch.}
+
+\item{\code{seed}}{random seed.}
 }
 \if{html}{\out{</div>}}
 }

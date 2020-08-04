@@ -1,5 +1,13 @@
 
 
+
+BatchNorm <- R6Class("BatchNorm", inherit = ClassModule, list(
+
+  #' @field eps tbd
+  eps = NA
+
+))
+
 #class BatchNorm(Module):
 #      def __init__(self, m):
 #      np.random.seed(0)
