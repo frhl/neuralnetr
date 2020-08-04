@@ -18,6 +18,7 @@ the gradients with respect to the weights.
 }
 \seealso{
 Other architecture: 
+\code{\link{BatchNorm}},
 \code{\link{Sequential}}
 }
 \concept{architecture}

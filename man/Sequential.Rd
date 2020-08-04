@@ -31,6 +31,7 @@ nn$mini_gd(X, Y, 2500, 0.05,  K = 2)
 }
 \seealso{
 Other architecture: 
+\code{\link{BatchNorm}},
 \code{\link{Linear}}
 }
 \concept{architecture}

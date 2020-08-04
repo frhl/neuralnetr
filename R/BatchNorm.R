@@ -1,12 +1,72 @@
-
+#' @title Batch Normalization
+#'
+#' @description Avoid internal covariate shift by
+#' standardizing input values for each mini batch,
+#' meaning that the scale of the inputs remain the same
+#' regardless of how the weights in the previous layer
+#' changes.
+#'
+#' @note work in progress
+#'
+#'
+#' @family architecture
+#' @source https://arxiv.org/abs/1502.03167 / MIT
+#'
+#'
 
 
 BatchNorm <- R6Class("BatchNorm", inherit = ClassModule, list(
 
-  #' @field eps tbd
-  eps = NA
+  #' @field eps small constant avoid division by zero.
+  #' @field m number of input channels
+  #' @field B weights (nl × 1 vector)
+  #' @field G weights (nl × 1 vector)
+  eps = 10e-18,
+  m = NULL,
+  B = NULL,
+  G = NULL,
+
+  # initialize learned shifts and scaling
+  initialize = function(m) {
+    self$m = m
+    self$B = matrix( rep(0, m), ncol = 1)
+    self$G = matrix( rnorm(m, 0, 1*self$m^(-0.5)), ncol = 1)
+  },
+
+
+  #' @field A m x K: m input channels and mini-batch size K
+  #' @field K mini-batch size.
+  #' @field mus batch-wise means.
+  #' @field vars batch-wise variances.
+  #' @field batch-wise normalized inputs using input, mus, vars and eps.
+  A = NULL,
+  K = NULL,
+  mus = NULL,
+  vars = NULL,
+  norm = NULL,
+
+  # Works on m x b matrices of m input channels and b different inputs
+  forward = function(A) {
+
+    self$A = A
+    self$K = ncol(A)
+
+    self$mus = NULL  # Your Code
+    self$vars = NULL  # Your Code
+
+    # # Normalize inputs using their mean and standard deviation
+    # self.norm = NULL  # Your Code
+    #
+    # # Return scaled and shifted versions of self.norm
+    # return NULL  # Your Code
+
+
+
+  }
+
 
 ))
+
 
 #class BatchNorm(Module):
 #      def __init__(self, m):
