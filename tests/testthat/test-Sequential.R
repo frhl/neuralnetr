@@ -23,12 +23,11 @@ test_that('Sequential can be setup like a neural network',{
 
 })
 
-test_that('Sequential can be setup like a neural network',{
+test_that('Minibatch gradient descent',{
 
   # setup problem
   nn = Sequential$new(list(
     Linear$new(2,5), ReLU$new(),
-    Linear$new(5,5), Tanh$new(),
     Linear$new(5,2), SoftMax$new()),
     NLL$new())
 

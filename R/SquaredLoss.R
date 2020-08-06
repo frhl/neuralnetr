@@ -25,7 +25,7 @@ SquaredLoss <- R6Class("SquaredLoss", inherit = ClassModule, list(
   forward = function(Ypred, Y) {
     self$Ypred = Ypred
     self$Y = Y
-    loss = 0.5*(Ypred - Y)^2
+    loss = sum(0.5*(Y - Ypred)^2)
     return(loss)
   },
 
@@ -33,7 +33,7 @@ SquaredLoss <- R6Class("SquaredLoss", inherit = ClassModule, list(
   #' gradient w.r.t. the loss
   #' @return  dLdZ (? x b)
   backward = function(){
-    return(self$Ypred-self$Y)
+    return(self$Y - self$Ypred)
   })
 )
 

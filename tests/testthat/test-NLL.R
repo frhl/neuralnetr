@@ -2,7 +2,10 @@ context('NLL')
 
 nll = NLL$new()
 
-test_that('forward method',{
+test_that('forward',{
+
+
+  #nll$forward(Ypred = c(1,1,4,3), Y = c(1,4,4,2))
 
   # double sample
   x1 = matrix(c(3, 3, 8,17), ncol = 2, nrow = 2)
@@ -12,7 +15,7 @@ test_that('forward method',{
 
 })
 
-test_that('backward method',{
+test_that('backward',{
 
   # double sample
   #x1 = matrix(c(6, 9, -2, 3), ncol = 2, nrow = 2)

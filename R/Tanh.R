@@ -1,4 +1,4 @@
-#' @title Trignometric Tanh
+#' @title Trigonometric Tanh
 #'
 #' @description Each activation module has a forward method that
 #' takes in a batch of pre-activations Z and returns a batch of

@@ -31,3 +31,13 @@
 argmax = function(x, margin = 2){
   return(apply(x, margin, function(i) which(i==max(i))))
 }
+
+
+#' @title standardize
+#' @description center array around mean of zero, and sd of one.
+#' @export
+standardize <- function(x) return((x - mean(x))/sd(x))
+
+
+
+
