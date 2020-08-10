@@ -18,4 +18,19 @@ test_that('Backward', {
 
 })
 
+test_that('Squared loss in Sequential', {
+
+  nn = Sequential$new(list(
+    Linear$new(1,5), Tanh$new(),
+    Linear$new(5,1)), SquaredLoss$new())
+
+  #
+  #X = t(as.matrix(seq(3,5), nrow = 1)) #xor_example$X
+  # Y = X * 1
+
+  # training with stochastic gradient decsent
+  loss = nn$sgd(X, Y, 25, 0.01)
+
+})
+
 

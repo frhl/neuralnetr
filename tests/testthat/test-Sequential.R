@@ -3,6 +3,7 @@ context('Sequential')
 
 test_that('Sequential can be setup like a neural network',{
 
+  set.seed(1)
     # setup problem
     nn = Sequential$new(list(
       Linear$new(2,5), ReLU$new(),
@@ -25,6 +26,7 @@ test_that('Sequential can be setup like a neural network',{
 
 test_that('Minibatch gradient descent',{
 
+  set.seed(1)
   # setup problem
   nn = Sequential$new(list(
     Linear$new(2,5), ReLU$new(),
@@ -44,6 +46,24 @@ test_that('Minibatch gradient descent',{
 
 })
 
+test_that('Multiclass classification',{
+
+  set.seed(1)
+  nn = Sequential$new(list(
+    Linear$new(2,2), ReLU$new(),
+    Linear$new(2,3), SoftMax$new()), # note, the 3 output neurons
+    NLL$new())
+
+  # xor problem
+  X = t(as.matrix(data.frame(x1=c(1,2,1,2),x2=c(1,2,2,1))))
+  Y = onehot(c('C','A','B','C'))
+  q = nn$sgd(X, Y, 2500, 0.05)
+  q = nn$classify(X)
+  plot_tidy_2d(nn, X)
+
+  expect_equal(q, c(0,1,2,0))
+
+})
 
 
 

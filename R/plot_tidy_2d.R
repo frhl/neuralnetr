@@ -14,12 +14,12 @@ plot_tidy_2d <- function(nn, X){
 
   # classify objects
   actual = as.data.frame(t(X))
-  actual$confidence = nn$classify(X)
+  actual$confidence = as.factor(nn$classify(X))
 
   # setup plot
   p = ggplot() +
     geom_tile(data = map, aes(x=x,y=y,fill=class), color='white') +
-    geom_point(data = actual, aes(x=x1, y=x2, fill = confidence), size = 4, shape = 21, stroke = 0.5) +
+    geom_point(data = actual, aes(x=x1, y=x2, fill = confidence), size = 4, shape = 21, stroke = 0.5, inherit.aes = F) +
     theme_minimal()
 
   return(p)

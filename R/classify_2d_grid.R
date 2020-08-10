@@ -1,6 +1,7 @@
 #' @title Classify 2d plot
 #'
-#' @description convert a scatter plot into a grid-like plot of preditction confidence.
+#' @description generate a matrix with decision boundaries and softmax probabilities
+#' by classifying a sequence of (x, y) pairs.
 #' @param nn the neural network.
 #' @param xlims vector. xlimits.
 #' @param ylims vector. ylimits.
@@ -17,7 +18,10 @@ classify_2d_grid = function(nn, xlims = c(0, 2), ylims = c(0, 2), bys = 0.1){
   d1 <- expand.grid(x = x, y = y)
 
   # classify
-  d1$class = nn$forward(t(as.matrix(d1)))[1,]
+  probs <- as.data.frame(t(nn$forward(t(as.matrix(d1)))))
+  colnames(probs) <- paste0(rep('softmax.c', ncol(probs)), 1:ncol(probs))
+  probs$class <- as.factor(nn$classify(t(as.matrix(d1))))
+  d1 <- cbind(d1, probs)
 
   return(d1)
 
