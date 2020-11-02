@@ -29,7 +29,7 @@ test_that('Squared loss in Sequential', {
   # Y = X * 1
 
   # training with stochastic gradient decsent
-  loss = nn$sgd(X, Y, 25, 0.01)
+  #loss = nn$sgd(X, Y, 25, 0.01)
 
 })
 

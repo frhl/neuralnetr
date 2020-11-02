@@ -1,24 +1,30 @@
-set.seed(1)
-nn = Sequential$new(list(
-  Linear$new(2,100), ReLU$new(),
-  Linear$new(100,100), Tanh$new(),
-  Linear$new(100,2), SoftMax$new()), # note, the 3 output neurons
-  NLL$new())
 
-# xor problem
-n = 200
-X = t(as.matrix(data.frame(x1=runif(n, -5, 5), x2=runif(n, -5, 5))))
-f = function(x) sin(x) ** 3 * 5
-rule = ifelse(X[2, ] < f(X[1, ]), 1, 2)
-Y = onehot(rule)
+test_that('experiment 1 (sin)',{
+  set.seed(1)
+  nn = Sequential$new(list(
+    Linear$new(2,7), Tanh$new(),
+    Linear$new(7,7), Tanh$new(),
+    #Linear$new(10,10), Tanh$new(),
+    #Linear$new(10,10), Tanh$new(),
+    #Linear$new(10,10), Tanh$new(),
+    Linear$new(7,2), SoftMax$new()), # note, the 3 output neurons
+    NLL$new())
 
-# plot curve
-plot(X[1,], X[2,], col = rule)
-sin.curve = seq(-5,5,length.out = 100)
-points(sin.curve, f(sin.curve), type = 'l')
+  # xor problem
+  n = 200
+  X = t(as.matrix(data.frame(x1=runif(n, -5, 5), x2=runif(n, -5, 5))))
+  f = function(x) sin(x) ** 3 * 5
+  rule = ifelse(X[2, ] < f(X[1, ]), 1, 2)
+  Y = onehot(rule)
 
-q = nn$sgd(X, Y, 10000, 0.001)
-q = nn$classify(X)
-plot_tidy_2d(nn, X)
+  # plot curve
+  plot(X[1,], X[2,], col = rule)
+  sin.curve = seq(-5,5,length.out = 100)
+  points(sin.curve, f(sin.curve), type = 'l')
 
-expect_equal(q, c(0,1,2,0))
+  q = nn$sgd(X, Y, 75000, 0.001)
+  q = nn$classify(X)
+  plot_tidy_2d(nn, X)
+  accuracy = mean(q+1!=rule)
+  expect_gt(accuracy, 0.9) # expect >90% accuracy
+})

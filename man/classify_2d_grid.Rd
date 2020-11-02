@@ -19,5 +19,6 @@ classify_2d_grid(nn, xlims = c(0, 2), ylims = c(0, 2), bys = 0.1)
 data.frame
 }
 \description{
-convert a scatter plot into a grid-like plot of preditction confidence.
+generate a matrix with decision boundaries and softmax probabilities
+by classifying a sequence of (x, y) pairs.
 }

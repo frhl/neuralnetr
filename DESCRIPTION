@@ -20,7 +20,7 @@ Suggests:
 Imports:
     stats
 Encoding: UTF-8
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Collate: 
     'BatchNorm.R'
     'classify_2d_grid.R'
@@ -36,4 +36,3 @@ Collate:
     'SquaredLoss.R'
     'Tanh.R'
     'Linear.R'
-
